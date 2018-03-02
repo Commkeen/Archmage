@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archmage", "Archmage\Archmage.csproj", "{767D3C90-0D95-4E19-AF16-275DB061C6D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelGenTestApp", "LevelGenTestApp\LevelGenTestApp.csproj", "{5DCC5398-91B5-4373-948B-EACBE93F2680}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{767D3C90-0D95-4E19-AF16-275DB061C6D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{767D3C90-0D95-4E19-AF16-275DB061C6D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{767D3C90-0D95-4E19-AF16-275DB061C6D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{767D3C90-0D95-4E19-AF16-275DB061C6D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DCC5398-91B5-4373-948B-EACBE93F2680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DCC5398-91B5-4373-948B-EACBE93F2680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DCC5398-91B5-4373-948B-EACBE93F2680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DCC5398-91B5-4373-948B-EACBE93F2680}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

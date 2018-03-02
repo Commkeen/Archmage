@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{767D3C90-0D95-4E19-AF16-275DB061C6D6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Archmage</RootNamespace>
+    <AssemblyName>Archmage</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="libtcod-net">
+      <HintPath>libtcod 1.5.1 c#\libtcod-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Content\Actors\Enemy_QuazaxRocketeer.cs" />
+    <Compile Include="src\Content\Actors\Enemy_Mechanodragon.cs" />
+    <Compile Include="src\Content\Actors\Enemy_SpectralPupil.cs" />
+    <Compile Include="src\Content\Actors\Enemy_GopherkinScrub.cs" />
+    <Compile Include="src\Content\Actors\Enemy_Bluecap.cs" />
+    <Compile Include="src\Content\Actors\Enemy_Zealot.cs" />
+    <Compile Include="src\Content\Actors\Enemy_Minotaur.cs" />
+    <Compile Include="src\Content\Actors\Enemy_RestlessSpirit.cs" />
+    <Compile Include="src\Content\Actors\Enemy_Delver.cs" />
+    <Compile Include="src\Content\Actors\Enemy_ArmoredWorg.cs" />
+    <Compile Include="src\Content\Actors\Enemy_OrcBrute.cs" />
+    <Compile Include="src\Content\Actors\Enemy_GopherkinAdept.cs" />
+    <Compile Include="src\Content\Actors\Enemy_GoblinTinker.cs" />
+    <Compile Include="src\Content\Actors\Enemy_Wisp.cs" />
+    <Compile Include="src\Content\Actors\Enemy_Dog.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_GenericShield.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_AstralConduit.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_EnemyMagicShield.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_Invincibility.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_Stun.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_DamageOverTime.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_XrayVision.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_Energize.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_BoundSpirit.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_ScaledSkin.cs" />
+    <Compile Include="src\Content\Behaviors\ActorBehaviors\ActorBehavior_GenericBuff.cs" />
+    <Compile Include="src\Content\Behaviors\TileBehaviors\TileBehavior_Statue.cs" />
+    <Compile Include="src\Content\Behaviors\TileBehaviors\TileBehavior_StoneToGlass.cs" />
+    <Compile Include="src\Content\Behaviors\TileBehaviors\TileBehavior_Door.cs" />
+    <Compile Include="src\Content\Items\Tonic_EssenceSmall.cs" />
+    <Compile Include="src\Content\Items\Item_Spellbook.cs" />
+    <Compile Include="src\Content\Items\EssenceCrystal.cs" />
+    <Compile Include="src\Content\Items\Amulet_Sealing.cs" />
+    <Compile Include="src\Content\Items\Potion_Health.cs" />
+    <Compile Include="src\Content\Items\Scroll_DetectMagic.cs" />
+    <Compile Include="src\Content\SpecialEffects\SpecialEffect_BasicProjectile.cs" />
+    <Compile Include="src\Content\Spells\Spell_Flicker.cs" />
+    <Compile Include="src\Content\Spells\Spell_Meteor.cs" />
+    <Compile Include="src\Content\Spells\Spell_SlicingWind.cs" />
+    <Compile Include="src\Content\Spells\Spell_LightningBolt.cs" />
+    <Compile Include="src\Content\Spells\Spell_Dispel.cs" />
+    <Compile Include="src\Content\Spells\Spell_ArcaneBlast.cs" />
+    <Compile Include="src\Content\Spells\Spell_Quickshot.cs" />
+    <Compile Include="src\Content\Spells\Spell_BoundSpirit.cs" />
+    <Compile Include="src\Content\Spells\Spell_Energize.cs" />
+    <Compile Include="src\Content\Spells\Spell_Sleep.cs" />
+    <Compile Include="src\Content\Spells\Spell_TouchOfDeath.cs" />
+    <Compile Include="src\Content\Spells\Spell_Pain.cs" />
+    <Compile Include="src\Content\Spells\Spell_StoneToGlass.cs" />
+    <Compile Include="src\Content\Spells\Spell_Blink.cs" />
+    <Compile Include="src\Content\Spells\Spell_Invincibility.cs" />
+    <Compile Include="src\Content\Spells\Spell_XrayVision.cs" />
+    <Compile Include="src\Content\Spells\Spell_DarkArrow.cs" />
+    <Compile Include="src\Content\Spells\Discipline_Debug.cs" />
+    <Compile Include="src\Content\Spells\Discipline_Shadow.cs" />
+    <Compile Include="src\Content\Spells\Spell_Infect.cs" />
+    <Compile Include="src\Content\Spells\Spell_HurlSpines.cs" />
+    <Compile Include="src\Content\Spells\Spell_PhotonSpike.cs" />
+    <Compile Include="src\Content\Spells\Discipline_Nature.cs" />
+    <Compile Include="src\Content\Spells\Discipline_Arcane.cs" />
+    <Compile Include="src\Content\Spells\Spell_GravelShot.cs" />
+    <Compile Include="src\Content\Spells\Spell_AstralConduit.cs" />
+    <Compile Include="src\Content\Spells\Spell_MagicMissile.cs" />
+    <Compile Include="src\Content\Spells\Spell_ArcaneShield.cs" />
+    <Compile Include="src\Content\Spells\Spell_MagicDart.cs" />
+    <Compile Include="src\Content\Spells\Spell_ScaledSkin.cs" />
+    <Compile Include="src\Engine\Actors\Monster.cs" />
+    <Compile Include="src\Engine\AnimatedImage.cs" />
+    <Compile Include="src\Engine\Behaviors\ActorBehavior.cs" />
+    <Compile Include="src\Engine\Actors\Actor.cs" />
+    <Compile Include="src\Engine\Behaviors\TileBehavior.cs" />
+    <Compile Include="src\Engine\Command\CommandInterface.cs" />
+    <Compile Include="src\Engine\Command\TargetingCursor.cs" />
+    <Compile Include="src\Engine\DataStructures\AttackData.cs" />
+    <Compile Include="src\Engine\DataStructures\Color.cs" />
+    <Compile Include="src\Engine\DataStructures\AttackResult.cs" />
+    <Compile Include="src\Engine\GameData\ActorData.cs" />
+    <Compile Include="src\Engine\GameData\ItemData.cs" />
+    <Compile Include="src\Engine\GameData\LevelData.cs" />
+    <Compile Include="src\Engine\GameData\TileData.cs" />
+    <Compile Include="src\Engine\GameObjects\GameObjectPool.cs" />
+    <Compile Include="src\Engine\GlobalData\StudentStats.cs" />
+    <Compile Include="src\Engine\Items\Item.cs" />
+    <Compile Include="src\Engine\Items\ItemToken.cs" />
+    <Compile Include="src\Engine\Mapping\Dungeon.cs" />
+    <Compile Include="src\Engine\Mapping\LevelGeneration\BSPMapGenerator.cs" />
+    <Compile Include="src\Engine\Mapping\LevelGeneration\NewLevelGenerator.cs" />
+    <Compile Include="src\Engine\Mapping\LevelGeneration\NewLevelGen_Room.cs" />
+    <Compile Include="src\Engine\Mapping\LevelGeneration\NewLevelGen_SpecialRoomGenerator.cs" />
+    <Compile Include="src\Engine\Mapping\LevelGeneration\NewLevelGen_Tile.cs" />
+    <Compile Include="src\Engine\Mapping\LevelGeneration\OpenMapGenerator.cs" />
+    <Compile Include="src\Engine\Mapping\LevelGeneration\LevelGenerator.cs" />
+    <Compile Include="src\Engine\Mapping\LevelGeneration\MapGen_ActorEncounter.cs" />
+    <Compile Include="src\Engine\Mapping\LevelGeneration\MapGen_Room.cs" />
+    <Compile Include="src\Engine\Mapping\Map.cs" />
+    <Compile Include="src\Engine\Panels\CharacterStatPanel.cs" />
+    <Compile Include="src\Engine\Panels\SpellbookPanel.cs" />
+    <Compile Include="src\Engine\Panels\ItemsPanel.cs" />
+    <Compile Include="src\Engine\Panels\LearnSpellPanel.cs" />
+    <Compile Include="src\Engine\Panels\LevelUpPanel.cs" />
+    <Compile Include="src\Engine\Panels\MessagePanel.cs" />
+    <Compile Include="src\Engine\Panels\SpellHotbarPanel.cs" />
+    <Compile Include="src\Engine\Panels\UpgradePanel.cs" />
+    <Compile Include="src\Engine\Scenes\WinGameScene.cs" />
+    <Compile Include="src\Engine\Scenes\GameOverScene.cs" />
+    <Compile Include="src\Engine\Scenes\MainMenuScene.cs" />
+    <Compile Include="src\Engine\Scenes\Scene.cs" />
+    <Compile Include="src\Engine\Scenes\StartingDisciplineSelectScreen.cs" />
+    <Compile Include="src\Engine\SpecialEffects\SpecialEffect_BasicBlast.cs" />
+    <Compile Include="src\Engine\SpecialEffects\SpecialEffect.cs" />
+    <Compile Include="src\Engine\SpecialEffects\SpecialEffect_BasicMelee.cs" />
+    <Compile Include="src\Engine\Spells\Ability.cs" />
+    <Compile Include="src\Engine\Spells\Effects\Effect_PickRandomTargetsInRadius.cs" />
+    <Compile Include="src\Engine\Spells\Effects\Effect_Blast.cs" />
+    <Compile Include="src\Engine\Spells\SpellbookInterface.cs" />
+    <Compile Include="src\Engine\Spells\LearnSpellInterface.cs" />
+    <Compile Include="src\Engine\Spells\Discipline.cs" />
+    <Compile Include="src\Engine\Spells\Effects\Effect_GenericMelee.cs" />
+    <Compile Include="src\Engine\Spells\Effects\Effect.cs" />
+    <Compile Include="src\Engine\Spells\Effects\Effect_BasicDamage.cs" />
+    <Compile Include="src\Engine\Spells\Effects\Effect_GenericProjectile.cs" />
+    <Compile Include="src\Engine\Spells\Effects\Effect_WriteText.cs" />
+    <Compile Include="src\Engine\Spells\Spell.cs" />
+    <Compile Include="src\Engine\Spells\SpellFactory.cs" />
+    <Compile Include="src\Engine\Spells\UpgradeInterface.cs" />
+    <Compile Include="src\Engine\System\Input.cs" />
+    <Compile Include="src\Engine\System\Utility.cs" />
+    <Compile Include="src\Engine\Turns\ITakesTurns.cs" />
+    <Compile Include="src\Engine\DataStructures\DamageData.cs" />
+    <Compile Include="src\Engine\GameObjects\GameObject.cs" />
+    <Compile Include="src\Engine\Panels\MapPanel.cs" />
+    <Compile Include="src\Engine\Panels\Panel.cs" />
+    <Compile Include="src\Engine\System\Display.cs" />
+    <Compile Include="src\Engine\System\Game.cs" />
+    <Compile Include="src\Engine\DataStructures\IntVector2.cs" />
+    <Compile Include="src\Engine\Scenes\PlayScene.cs" />
+    <Compile Include="src\Engine\System\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Engine\Actors\Student.cs" />
+    <Compile Include="src\Engine\Mapping\Tiles\Tile.cs" />
+    <Compile Include="src\Engine\Turns\TurnCounter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\ArcaneSchool.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ArcaneSchool2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\LoseBanner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\NatureSchool.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ShadowSchool.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ShadowSchoolFinal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\terminal12x12_gs_ro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\terminal16x16_gs_ro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TitleLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\WinBanner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libtcod-net-unmanaged.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libtcod-VS.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDL.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\terminal.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zlib1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
